@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pako/2.0.4/pako.min.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+    <!-- Include your scripts.js -->
+    <script src="scripts.js"></script>
+
+</head>
+
+<body class="dash">
+    <div class="container-dash">
+        <div class="nav">
+            <nav class="account-settings">
+                <div class="user-info">
+
+                    <div class="dropdown">
+                        <div class="button1">
+                            <span class="help"> <a href="#">Help Centre</a></span>
+                        </div>
+                        <div class="button2">
+                            <button class="dropbtn2"> <span class="welcome-user"></span></button>
+                            <div class="dropdown-content">
+                                <span id="account-details">ACCOUNT SETTINGS</span>
+                                <a href="#" class="dropdown-menu">Personal details</a>
+                                <a href="#" class="dropdown-menu">Privacy & Security</a>
+                                <a href="#" class="dropdown-menu">Log out</a>
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <div class="back-button">
+                <a href="#">Back to home screen</a>
+                <p class="darktext">3 Month Fixed Rate Bond Issue 1</p>
+            </div>
+            <div class="account-summary">
+                <div class="account-details">
+                    <div class="flex-account-details1">
+                        <div class="flex-account-details2">
+                            <div class="flex-account-details-child1">
+                                <p class="lighttext">Sort code <span class="darktext">60-84-56</span></p>
+                            </div>
+                            <div class="flex-account-details-child3">
+                            </div>
+                            <div class="flex-account-details-child2">
+                                <p class="lighttext">Account number <span class="darktext">82918037</span></p>
+                            </div>
+                        </div>
+                        <div class="flex-account-details-child4">
+                            <p id="whitepara">SAVING ACCOUNT DETAILS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="balance-details">
+                    <p class="lighttext">Total balance: <span class="darktext">£1,24,557.40</span></p>
+                    <p class="lighttext">Available balance: <span class="darktext">£10,078.58</span></p>
+                </div>
+                <div class="interest-details">
+                    <div class="flex-account-details1">
+                        <div class="flex-account-details2">
+                            <div class="flex-interest-details-child1">
+                                <p class="lighttext">Gross Interest <span class="darktext">5.04%</span></p>
+                            </div>
+                            <div class="flex-interest-details-child3">
+                            </div>
+                            <div class="flex-interest-details-child2">
+                                <p class="lighttext">AER Interest <span class="darktext">5.16%</span></p>
+                            </div>
+                        </div>
+                        <div class="flex-interest-details-child4">
+                            <p id="whitepara">INTEREST PAID TO NOMINATED ACCOUNT<br>MONTHLY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div class="flex-account-details1">
+                        <div class="flex-account-details-child5">
+                            <a href="#" class="action-button"><span id="whitepara">How to move your funds</span></a>
+                        </div>
+                        <div class="actionspart">
+                        </div>
+                        <div class="flex-account-details-child6">
+                            <a href="#" class="action-button"><span id="whitepara">Manage account</span> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+    <div class="tabs">
+        <button class="tab-button-active">Transactions</button>
+        <button class="export-button1"><i class="bi bi-box-arrow-in-down export-icon"></i></button>
+        <button class="tab-button">Statements</button>
+        <button class="export-button2"><i class="bi bi-box-arrow-in-down export-icon"></i></button>
+
+    </div>
+    <div class="statements-section">
+        <div class="statement">
+            <div class="statement-container1" style="display:none;">
+                <div class="statement-container2">
+                    <div class="statement-child1">
+                        <p class="statement-text">Monthly statements</p>
+                    </div>
+                    <div class="statement-child2">
+                        <div class="dropdown">
+                            <div class="button2">
+                                <button class="dropbtn3" id="selectedYear"> <span>2024</span></button>
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-menu" data-year="2024">2024</a>
+                                    <a href="#" class="dropdown-menu" data-year="2023">2023</a>
+                                    <a href="#" class="dropdown-menu" data-year="2022">2022</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="monthly-statement-section">
+                    <table class="statement-table">
+                        <thead>
+                            <tr>
+                                <th>Statement ID</th>
+                                <th>Last Month Amount</th>
+                                <th>This Month Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€10,000</td>
+                                <td>€12,000</td>
+                                <td>February 2024</td>
+                            </tr>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€12,000</td>
+                                <td>€9,000</td>
+                                <td>March 2024</td>
+                            </tr>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€9,000</td>
+                                <td>€50,000</td>
+                                <td>April 2024</td>
+                            </tr>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€50,000</td>
+                                <td>€20,000</td>
+                                <td>May 2024</td>
+                            </tr>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€20,000</td>
+                                <td>€25,000</td>
+                                <td>June 2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+
+
+            <div class="statement-container3" style="display:none;">
+                <div class="statement-container2">
+                    <div class="statement-child1">
+                        <p class="statement-text">Transactions</p>
+                    </div>
+                    <div class="statement-child2">
+                        <div class="dropdown">
+                            <div class="button2">
+                                <button class="dropbtn3" id="selectedYear2"> <span>2024</span></button>
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-menu2" data-year="2024">2024</a>
+                                    <a href="#" class="dropdown-menu2" data-year="2023">2023</a>
+                                    <a href="#" class="dropdown-menu2" data-year="2022">2022</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="monthly-statement-section">
+                    <table class="Transactions-table">
+                        <thead>
+                            <tr>
+                                <th>Transaction ID</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€10,500</td>
+                                <td>Debit</td>
+                                <td>2 July 2024</td>
+                                <td>1:05 am</td>
+                            </tr>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€500</td>
+                                <td>Debit</td>
+                                <td>3 July 2024</td>
+                                <td>11:25 am</td>
+                            </tr>
+                            <tr>
+                                <td>BNKOFUK1263XXXXXXX</td>
+                                <td>€200</td>
+                                <td>Debit</td>
+                                <td>3 July 2024</td>
+                                <td>21:05 pm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="statement">
+            <p class="statement-text">Certificate of Interest</p>
+            <div class="certificate-of-interest">
+                <table class="Transactions-table">
+                    <tr>
+                        <th>Principal</th>
+                        <th>Interest</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        <td>€10,000</td>
+                        <td>3.65%</td>
+                        <td>26 January 2022</td>
+                        <td>€10,365</td>
+                    </tr>
+                    <tr>
+                        <td>€70,000</td>
+                        <td>3.65%</td>
+                        <td>25 July 2022</td>
+                        <td>€7,365</td>
+                    </tr>
+                    <tr>
+                        <td>€12,000</td>
+                        <td>3.05%</td>
+                        <td>25 January 2024</td>
+                        <td>€12,300</td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="exportOverlay" class="flex" style="display: none;">
+        <div class="container-otp">
+            <img src="https://cdn4.iconfinder.com/data/icons/lucid-files-and-folders/24/move_file_file_moved_export_document_send_file-512.png"
+                alt="Export Icon" class="export-icon-image">
+            <button id="closeExportOverlay" class="close-btn">Close</button>
+
+            <button class="center-btn-download">Download PDF</button>
+            <button class="center-btn-email">Send as Email</button>
+        </div>
+    </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
