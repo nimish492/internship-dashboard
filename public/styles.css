@@ -344,12 +344,12 @@ hr {
 .tab-button {
     background-color: #e5e5e5;
     border: none;
-    padding:0px;
+    padding: 0px;
     margin: 0 5px;
     border-radius: 5px;
     color: rgb(93, 93, 93);
     font-weight: 500;
-    margin:0px;
+    margin: 0px;
 }
 
 .tab-button.clicked {
@@ -578,7 +578,7 @@ flex-account-details1 {
 .flex-account-details-child1 {
     padding-top: 20px;
     margin-right: 40px;
-    margin-left: 50px;
+    margin-left: 40px;
 }
 
 .flex-account-details-child2 {
@@ -707,7 +707,8 @@ flex-account-details1 {
     padding-top: 50px;
 }
 
-.Transactions-table,.statement-table {
+.Transactions-table,
+.statement-table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
@@ -719,7 +720,7 @@ th {
     width: 100px;
     /* Adjust this value as needed */
     text-align: center;
-    word-wrap: break-word; 
+    word-wrap: break-word;
 }
 
 .statement-container1 {
@@ -934,7 +935,7 @@ html {
 .export-button1 {
     margin-right: 50px;
     margin-left: 20px;
-    padding:0px;
+    padding: 0px;
     background-color: #e5e5e5;
     color: white;
     border: none;
@@ -944,13 +945,13 @@ html {
 
 .export-button2 {
     margin-left: 20px;
-    padding:0px;
+    padding: 0px;
     background-color: #e5e5e5;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    }
+}
 
 .export-icon {
     background-color: #e5e5e5;
@@ -1014,12 +1015,10 @@ html {
 }
 
 
-.export-icon-image{
-  width: 60px;
-  width: 100px;
-  z-index: 1500px;
-  margin-left: 250px;
-  margin-top: 20px
+.export-icon-image {
+    width: 60px;
+    width: 100px;
+    z-index: 1500px;
+    margin-left: 250px;
+    margin-top: 20px
 }
-
-
